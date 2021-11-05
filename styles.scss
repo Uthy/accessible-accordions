@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.faqs {
+  width: 600px;
+  .acc-trigger {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    margin-bottom: 10px;
+    font-size: inherit;
+    font-family: "Fira Sans", sans-serif;
+
+    &:hover,
+    &:focus {
+      background: #ddd;
+    }
+
+    &:after {
+      content: "\2795";
+      font-size: 13px;
+      color: #777;
+      float: right;
+      margin-left: 5px;
+    }
+
+    &:focus,
+    &:active {
+      outline-color: -webkit-focus-ring-color;
+      outline-style: auto;
+    }
+  }
+
+  .active {
+    &:after {
+      content: "\2796";
+    }
+  }
+
+  .acc-panel {
+    padding: 5px 18px;
+    background-color: #f8f8f8;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    margin-bottom: 10px;
+  }
+
+  .show {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
